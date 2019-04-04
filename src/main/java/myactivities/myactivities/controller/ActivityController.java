@@ -22,10 +22,4 @@ public class ActivityController {
         return "index";
     }
 
-    @GetMapping("/fixActivities")
-    public String fixActivities(Model model) {
-        activityDAOService.fixActivities();
-        return allActivities(model);
-    }
-
 }
