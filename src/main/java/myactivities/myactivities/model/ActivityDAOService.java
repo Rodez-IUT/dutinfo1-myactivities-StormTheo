@@ -32,4 +32,5 @@ public interface ActivityDAOService {
     @Options(statementType = StatementType.CALLABLE)
     public void findAllActivitiesWithProcedureCall(Map<String,List<Activity>> parameters);
 
+    public List<Activity> findAllActivities();
 }
