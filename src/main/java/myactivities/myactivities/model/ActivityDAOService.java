@@ -37,4 +37,8 @@ public interface ActivityDAOService {
     @ResultMap("activity")
     public List<Activity> findAllActivities();
 
+    @Update(value= "{CALL fix_activities_without_owner()}")
+    @Options(statementType = StatementType.CALLABLE)
+    public void fixActivities();
+
 }
